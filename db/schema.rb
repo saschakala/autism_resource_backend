@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_15_161205) do
+ActiveRecord::Schema.define(version: 2021_01_15_172335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,17 +108,9 @@ ActiveRecord::Schema.define(version: 2021_01_15_161205) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.boolean "meme"
-    t.boolean "personal"
-    t.boolean "queer"
-    t.boolean "research"
-    t.boolean "comedy"
-    t.boolean "autobiographical"
-    t.boolean "poetry"
-    t.boolean "novel"
-    t.boolean "short_story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "tag_name"
   end
 
   add_foreign_key "article_tags", "articles"
