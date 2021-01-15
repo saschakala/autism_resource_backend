@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meme: false
+  personal: false
+  short_story: false
+  queer: false
+  research: false
+  novel: false
+  fiction: false
+  non_fiction: false
+  autobiographicalal: false
+  book: one
+  article: one
+  social_media_account: one
+  multimedium: one
+  misc: one
+
+two:
+  meme: false
+  personal: false
+  short_story: false
+  queer: false
+  research: false
+  novel: false
+  fiction: false
+  non_fiction: false
+  autobiographicalal: false
+  book: two
+  article: two
+  social_media_account: two
+  multimedium: two
+  misc: two
