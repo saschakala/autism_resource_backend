@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_005408) do
+ActiveRecord::Schema.define(version: 2021_01_16_005743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,6 +114,15 @@ ActiveRecord::Schema.define(version: 2021_01_16_005408) do
     t.index ["tag_id"], name: "index_multimedium_tags_on_tag_id"
   end
 
+  create_table "sma_creators", force: :cascade do |t|
+    t.bigint "social_media_account_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_sma_creators_on_creator_id"
+    t.index ["social_media_account_id"], name: "index_sma_creators_on_social_media_account_id"
+  end
+
   create_table "social_media_account_tags", force: :cascade do |t|
     t.bigint "social_media_account_id"
     t.bigint "tag_id"
@@ -152,6 +161,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_005408) do
   add_foreign_key "misc_tags", "tags"
   add_foreign_key "multimedium_tags", "multimedia"
   add_foreign_key "multimedium_tags", "tags"
+  add_foreign_key "sma_creators", "creators"
+  add_foreign_key "sma_creators", "social_media_accounts"
   add_foreign_key "social_media_account_tags", "social_media_accounts"
   add_foreign_key "social_media_account_tags", "tags"
 end
