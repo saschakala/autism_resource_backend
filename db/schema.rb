@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_004823) do
+ActiveRecord::Schema.define(version: 2021_01_16_005408) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "article_creators", force: :cascade do |t|
+    t.bigint "article_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_article_creators_on_article_id"
+    t.index ["creator_id"], name: "index_article_creators_on_creator_id"
+  end
 
   create_table "article_tags", force: :cascade do |t|
     t.bigint "article_id"
@@ -131,6 +140,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_004823) do
     t.string "tag_name"
   end
 
+  add_foreign_key "article_creators", "articles"
+  add_foreign_key "article_creators", "creators"
   add_foreign_key "article_tags", "articles"
   add_foreign_key "article_tags", "tags"
   add_foreign_key "book_creators", "books"
