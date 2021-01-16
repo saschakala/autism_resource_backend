@@ -1,0 +1,12 @@
+class CreateCreators < ActiveRecord::Migration[6.0]
+  def change
+    create_table :creators do |t|
+      t.string :first_name
+      t.string :last_name
+      t.string :url
+      t.boolean :autistic
+
+      t.timestamps
+    end
+  end
+end
