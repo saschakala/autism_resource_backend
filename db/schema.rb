@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_000253) do
+ActiveRecord::Schema.define(version: 2021_01_16_000737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "article_tags", force: :cascade do |t|
-    t.bigint "article_id", null: false
+    t.bigint "article_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "tag_id", null: false
+    t.bigint "tag_id"
     t.index ["article_id"], name: "index_article_tags_on_article_id"
     t.index ["tag_id"], name: "index_article_tags_on_tag_id"
   end
@@ -31,13 +31,13 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
     t.text "excerpt"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "creator_id", null: false
+    t.bigint "creator_id"
     t.index ["creator_id"], name: "index_articles_on_creator_id"
   end
 
   create_table "book_tags", force: :cascade do |t|
-    t.bigint "book_id", null: false
-    t.bigint "tag_id", null: false
+    t.bigint "book_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_book_tags_on_book_id"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "creator_id"
+    t.index ["creator_id"], name: "index_books_on_creator_id"
   end
 
   create_table "creators", force: :cascade do |t|
@@ -63,8 +65,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
   end
 
   create_table "misc_tags", force: :cascade do |t|
-    t.bigint "misc_id", null: false
-    t.bigint "tag_id", null: false
+    t.bigint "misc_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["misc_id"], name: "index_misc_tags_on_misc_id"
@@ -90,8 +92,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
   end
 
   create_table "multimedium_tags", force: :cascade do |t|
-    t.bigint "multimedium_id", null: false
-    t.bigint "tag_id", null: false
+    t.bigint "multimedium_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["multimedium_id"], name: "index_multimedium_tags_on_multimedium_id"
@@ -99,8 +101,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
   end
 
   create_table "social_media_account_tags", force: :cascade do |t|
-    t.bigint "social_media_account_id", null: false
-    t.bigint "tag_id", null: false
+    t.bigint "social_media_account_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["social_media_account_id"], name: "index_social_media_account_tags_on_social_media_account_id"
@@ -129,6 +131,7 @@ ActiveRecord::Schema.define(version: 2021_01_16_000253) do
   add_foreign_key "articles", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
+  add_foreign_key "books", "creators"
   add_foreign_key "misc_tags", "miscs"
   add_foreign_key "misc_tags", "tags"
   add_foreign_key "multimedium_tags", "multimedia"
