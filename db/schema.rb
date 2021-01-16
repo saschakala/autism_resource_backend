@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_010109) do
+ActiveRecord::Schema.define(version: 2021_01_16_010604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,15 @@ ActiveRecord::Schema.define(version: 2021_01_16_010109) do
     t.boolean "autistic"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "misc_creators", force: :cascade do |t|
+    t.bigint "misc_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_misc_creators_on_creator_id"
+    t.index ["misc_id"], name: "index_misc_creators_on_misc_id"
   end
 
   create_table "misc_tags", force: :cascade do |t|
@@ -166,6 +175,8 @@ ActiveRecord::Schema.define(version: 2021_01_16_010109) do
   add_foreign_key "book_creators", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
+  add_foreign_key "misc_creators", "creators"
+  add_foreign_key "misc_creators", "miscs"
   add_foreign_key "misc_tags", "miscs"
   add_foreign_key "misc_tags", "tags"
   add_foreign_key "mm_creators", "creators"
