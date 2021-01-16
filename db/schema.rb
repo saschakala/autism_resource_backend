@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_000737) do
+ActiveRecord::Schema.define(version: 2021_01_16_004823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,15 @@ ActiveRecord::Schema.define(version: 2021_01_16_000737) do
     t.text "excerpt"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "book_creators", force: :cascade do |t|
+    t.bigint "book_id"
     t.bigint "creator_id"
-    t.index ["creator_id"], name: "index_articles_on_creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_book_creators_on_book_id"
+    t.index ["creator_id"], name: "index_book_creators_on_creator_id"
   end
 
   create_table "book_tags", force: :cascade do |t|
@@ -51,8 +58,6 @@ ActiveRecord::Schema.define(version: 2021_01_16_000737) do
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "creator_id"
-    t.index ["creator_id"], name: "index_books_on_creator_id"
   end
 
   create_table "creators", force: :cascade do |t|
@@ -128,10 +133,10 @@ ActiveRecord::Schema.define(version: 2021_01_16_000737) do
 
   add_foreign_key "article_tags", "articles"
   add_foreign_key "article_tags", "tags"
-  add_foreign_key "articles", "creators"
+  add_foreign_key "book_creators", "books"
+  add_foreign_key "book_creators", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
-  add_foreign_key "books", "creators"
   add_foreign_key "misc_tags", "miscs"
   add_foreign_key "misc_tags", "tags"
   add_foreign_key "multimedium_tags", "multimedia"
