@@ -61,8 +61,8 @@ Source.create(
     genre: "Autobiographical", 
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
     img_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F71jcxn78s%2BL.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FSpectrum-Women-Walking-Beat-Autism%2Fdp%2F1785924346&tbnid=8ArqDipia5la_M&vet=12ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ..i&docid=dCC0cMZmxrnBjM&w=848&h=1250&q=spectrum%20women&ved=2ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ", 
-    tag_ids: %w[2 6 9],
-    creator_ids: %w[1 2]
+    tag_ids: %w[2],
+    creator_ids: %w[1]
 )
 
 Source.create(
