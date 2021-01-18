@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :creators
+  
   namespace :api do
     namespace :v1 do
-      resources :miscs
-      resources :multimedia
-      resources :social_media_accounts
+      resources :sources
+      resources :creators
       resources :tags
-      resources :articles
-      resources :books
     end
   end
 
