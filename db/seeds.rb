@@ -30,16 +30,27 @@ Tag.create(tag_name: "not_explicitly_autistic")
 
 Tag.create(tag_name: "created_by_autistic")
 
+# 1
 Creator.create(
     first_name:"Barb",
     last_name:"Cook",
-    autistic: true
+    autistic: true,
+    url: "https://barbcook.com.au/"
 )
-
+# 2
 Creator.create(
     first_name:"Dr. Michelle",
     last_name:"Garnett",
-    autistic: false
+    autistic: false,
+    url: "https://mindsandhearts.net/dr-michelle-garnett/"
+)
+
+# 3
+Creator.create(
+    first_name:"Camilla",
+    last_name:"Pang",
+    autistic: true,
+    url: "https://www.camillapang.com/"
 )
 
 Source.create(
