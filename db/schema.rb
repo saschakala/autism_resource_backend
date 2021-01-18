@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_18_155702) do
+ActiveRecord::Schema.define(version: 2021_01_18_155819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,6 +161,15 @@ ActiveRecord::Schema.define(version: 2021_01_18_155702) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "source_creators", force: :cascade do |t|
+    t.bigint "source_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_source_creators_on_creator_id"
+    t.index ["source_id"], name: "index_source_creators_on_source_id"
+  end
+
   create_table "source_tags", force: :cascade do |t|
     t.bigint "source_id"
     t.bigint "tag_id"
@@ -209,6 +218,8 @@ ActiveRecord::Schema.define(version: 2021_01_18_155702) do
   add_foreign_key "sma_creators", "social_media_accounts"
   add_foreign_key "social_media_account_tags", "social_media_accounts"
   add_foreign_key "social_media_account_tags", "tags"
+  add_foreign_key "source_creators", "creators"
+  add_foreign_key "source_creators", "sources"
   add_foreign_key "source_tags", "sources"
   add_foreign_key "source_tags", "tags"
 end
