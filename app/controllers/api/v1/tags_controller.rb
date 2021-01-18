@@ -1,2 +1,2 @@
-class API::V1::TagsController < ApplicationController
+class Api::V1::TagsController < ApplicationController
 end
