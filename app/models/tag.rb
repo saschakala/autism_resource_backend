@@ -9,4 +9,7 @@ class Tag < ApplicationRecord
     has_many :multimedia, through: :multimedium_tags
     has_many :social_media_account_tags
     has_many :social_media_accounts, through: :social_media_account_tags
+
+    has_many :source_tags
+    has_many :sources, through: :source_tags
 end

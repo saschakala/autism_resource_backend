@@ -9,4 +9,7 @@ class Creator < ApplicationRecord
     has_many :multimedia, through: :mm_creators
     has_many :misc_creators
     has_many :miscs, through: :misc_creators
+
+    has_many :source_creators
+    has_many :sources, through: :source_creators
 end
