@@ -1,2 +1,13 @@
-class API::V1::SourcesController < ApplicationController
+class Api::V1::SourcesController < ApplicationController
+
+    def index
+        sources = Source.all
+        render json: SourceSerializer.new(sources)
+    end
+
 end
+
+
+
+
+
