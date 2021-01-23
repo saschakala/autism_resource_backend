@@ -62,7 +62,8 @@ Source.create(
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
     img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534033798l/38884913._SX318_.jpg", 
     tag_ids: %w[2 6 9],
-    creator_ids: %w[1 2]
+    creator_ids: %w[1 2],
+    description: "Barb Cook and 14 other autistic women describe life from a female autistic perspective, and present empowering, helpful and supportive insights from their personal experience for fellow autistic women. Michelle Garnett's comments validate and expand the experiences described from a clinician's perspective, and provide extensive recommendations."
 )
 
 Source.create(
@@ -72,7 +73,8 @@ Source.create(
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
     img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1585179141l/52559342.jpg", 
     tag_ids: %w[4 8 12],
-    creator_ids: %w[3]
+    creator_ids: %w[3],
+    description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
 )
 
 
