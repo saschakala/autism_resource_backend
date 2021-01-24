@@ -42,7 +42,8 @@ Creator.create(
     last_name:"Cook",
     autistic: true,
     url: "https://barbcook.com.au/",
-    bio: "Barb Cook - Editor in Chief Formally identified on the autism spectrum along with ADHD and phonological dyslexia in 2009 at the age of 40, Barb is founder and editor in chief of Spectrum Women Magazine and editor and co-author of Spectrum Women: Walking to the Beat of Autism."
+    bio: "Barb Cook - Editor in Chief Formally identified on the autism spectrum along with ADHD and phonological dyslexia in 2009 at the age of 40, Barb is founder and editor in chief of Spectrum Women Magazine and editor and co-author of Spectrum Women: Walking to the Beat of Autism.",
+    pronouns: "she/her/hers"
 )
 # 2
 Creator.create(
@@ -51,7 +52,8 @@ Creator.create(
     autistic: false,
     title: "Dr.",
     url: "https://mindsandhearts.net/dr-michelle-garnett/",
-    bio: "Dr Michelle Garnett PhD is a clinical psychologist and founder of Minds & Hearts, a clinic specialising in Autism Spectrum Disorders (ASD) in Brisbane, Australia."
+    bio: "Dr Michelle Garnett PhD is a clinical psychologist and founder of Minds & Hearts, a clinic specialising in Autism Spectrum Disorders (ASD) in Brisbane, Australia.",
+    pronouns: "she/her/hers"
 )
 
 # 3
@@ -61,7 +63,8 @@ Creator.create(
     autistic: true,
     title: "PhD",
     url: "https://www.camillapang.com/",
-    bio: "Camilla Sih Mai Pang is a British computational biologist, writer and autism advocate. In 2020 she was awarded the Royal Society Prizes for Science Books for her memoir Explaining Humans: What Science Can Teach Us about Life, Love and Relationships."
+    bio: "Camilla Sih Mai Pang is a British computational biologist, writer and autism advocate. In 2020 she was awarded the Royal Society Prizes for Science Books for her memoir Explaining Humans: What Science Can Teach Us about Life, Love and Relationships.",
+    pronouns: "she/her/hers"
 )
 
 #4
@@ -70,16 +73,18 @@ Creator.create(
     last_name:"Kraemer",
     autistic: true,
     url: "https://autisticscienceperson.com/",
-    bio: "Ira Kraemer is an autistic disability advocate. They serve on multiple disability committees and speak on hyperacusis and auditory sensitivity. Ira is a campaigner for accessibility, disability rights, and acceptance of autistic people in this world."
+    bio: "Ira Kraemer is an autistic disability advocate. They serve on multiple disability committees and speak on hyperacusis and auditory sensitivity. Ira is a campaigner for accessibility, disability rights, and acceptance of autistic people in this world.",
+    pronouns: "they/them/theirs"
 )
 
 #5
 Creator.create(
-    first_name:"Melanie",
+    first_name:"M. Remi",
     last_name:"Yergeau",
     autistic: true,
     url: "https://autisticscienceperson.com/",
-    bio: "Melanie Yergeau is an associate professor of Digital Studies and English and associate director of the Digital Studies Institute at the University of Michigan. They are an autistic academic, and their scholarly interests include writing studies, digital studies, queer rhetorics, disability studies, and theories of mind."
+    bio: "Remi Yergeau is an associate professor of Digital Studies and English and associate director of the Digital Studies Institute at the University of Michigan. They are an autistic academic, and their scholarly interests include writing studies, digital studies, queer rhetorics, disability studies, and theories of mind.",
+    pronouns: "they/them/theirs"
 )
 
 Source.create(
