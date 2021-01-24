@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :sources do
         get '/books/', to: 'sources#show'
+        get '/articles', to: 'sources#show'
       end
       resources :creators
       resources :tags

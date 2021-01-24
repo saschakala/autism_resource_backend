@@ -7,8 +7,12 @@ class Api::V1::SourcesController < ApplicationController
 
     def show
         books = Source.books
-        if params[:id] == "books"
+        articles = Source.articles
+        case 
+        when params[:id] == "books"
             render json: SourceSerializer.new(books)
+        when params[:id] == "articles"
+            render json: SourceSerializer.new(articles)
         end
     end
 
