@@ -30,12 +30,20 @@ Tag.create(tag_name: "not_explicitly_autistic")
 
 Tag.create(tag_name: "created_by_autistic")
 
+Tag.create(tag_name: "article")
+
+Tag.create(tag_name: "academic")
+
+Tag.create(tag_name: "book")
+
 # 1
 Creator.create(
     first_name:"Barb",
     last_name:"Cook",
     autistic: true,
-    url: "https://barbcook.com.au/"
+    url: "https://barbcook.com.au/",
+    bio: "Barb Cook - Editor in Chief Formally identified on the autism spectrum along with ADHD and phonological dyslexia in 2009 at the age of 40, Barb is founder and editor in chief of Spectrum Women Magazine and editor and co-author of Spectrum Women: Walking to the Beat of Autism.",
+    pronouns: "she/her/hers"
 )
 # 2
 Creator.create(
@@ -43,7 +51,9 @@ Creator.create(
     last_name:"Garnett",
     autistic: false,
     title: "Dr.",
-    url: "https://mindsandhearts.net/dr-michelle-garnett/"
+    url: "https://mindsandhearts.net/dr-michelle-garnett/",
+    bio: "Dr Michelle Garnett PhD is a clinical psychologist and founder of Minds & Hearts, a clinic specialising in Autism Spectrum Disorders (ASD) in Brisbane, Australia.",
+    pronouns: "she/her/hers"
 )
 
 # 3
@@ -52,7 +62,29 @@ Creator.create(
     last_name:"Pang",
     autistic: true,
     title: "PhD",
-    url: "https://www.camillapang.com/"
+    url: "https://www.camillapang.com/",
+    bio: "Camilla Sih Mai Pang is a British computational biologist, writer and autism advocate. In 2020 she was awarded the Royal Society Prizes for Science Books for her memoir Explaining Humans: What Science Can Teach Us about Life, Love and Relationships.",
+    pronouns: "she/her/hers"
+)
+
+#4
+Creator.create(
+    first_name:"Ira",
+    last_name:"Kraemer",
+    autistic: true,
+    url: "https://autisticscienceperson.com/",
+    bio: "Ira Kraemer is an autistic disability advocate. They serve on multiple disability committees and speak on hyperacusis and auditory sensitivity. Ira is a campaigner for accessibility, disability rights, and acceptance of autistic people in this world.",
+    pronouns: "they/them/theirs"
+)
+
+#5
+Creator.create(
+    first_name:"M. Remi",
+    last_name:"Yergeau",
+    autistic: true,
+    url: "https://autisticscienceperson.com/",
+    bio: "Remi Yergeau is an associate professor of Digital Studies and English and associate director of the Digital Studies Institute at the University of Michigan. They are an autistic academic, and their scholarly interests include writing studies, digital studies, queer rhetorics, disability studies, and theories of mind.",
+    pronouns: "they/them/theirs"
 )
 
 Source.create(
@@ -60,9 +92,10 @@ Source.create(
     title: "Spectrum Women", 
     genre: "Autobiographical", 
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
-    img_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F71jcxn78s%2BL.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FSpectrum-Women-Walking-Beat-Autism%2Fdp%2F1785924346&tbnid=8ArqDipia5la_M&vet=12ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ..i&docid=dCC0cMZmxrnBjM&w=848&h=1250&q=spectrum%20women&ved=2ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ", 
-    tag_ids: %w[2 6 9],
-    creator_ids: %w[1 2]
+    img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534033798l/38884913._SX318_.jpg", 
+    tag_ids: %w[2 6 9 15],
+    creator_ids: %w[1 2],
+    description: "Barb Cook and 14 other autistic women describe life from a female autistic perspective, and present empowering, helpful and supportive insights from their personal experience for fellow autistic women. Michelle Garnett's comments validate and expand the experiences described from a clinician's perspective, and provide extensive recommendations."
 )
 
 Source.create(
@@ -70,26 +103,35 @@ Source.create(
     title: "An Outsider's Guide to Humans", 
     genre: "Science", 
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
-    img_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F518ylyJxQYL._SX329_BO1%2C204%2C203%2C200_.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FOutsiders-Guide-Humans-Science-Taught%2Fdp%2F1984881639&tbnid=Ho3tfyMf8KchSM&vet=12ahUKEwj6paLgsabuAhUi8VMKHbruDywQMygAegQIARBw..i&docid=LWpw93-wq3iIVM&w=331&h=499&q=an%20outsiders%20guide%20to%20humans&ved=2ahUKEwj6paLgsabuAhUi8VMKHbruDywQMygAegQIARBw", 
-    tag_ids: %w[4 8 12],
-    creator_ids: %w[3]
+    img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1585179141l/52559342.jpg", 
+    tag_ids: %w[4 8 12 15],
+    creator_ids: %w[4],
+    description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
+)
+
+Source.create(
+    source_type: "Book",
+    title: "Authoring Autism: On Rhetoric and Neurological Queerness", 
+    genre: "Academia", 
+    url: "https://www.dukeupress.edu/authoring-autism",
+    img_url: "https://www.dukeupress.edu/Assets/Books/978-0-8223-7020-8_pr.jpg", 
+    tag_ids: %w[3 4 12 14 15],
+    creator_ids: %w[5],
+    description: "In Authoring Autism Melanie Yergeau defines neurodivergence as an identity—neuroqueerness—rather than an impairment. Using a queer theory framework, Yergeau notes the stereotypes that deny autistic people their humanity and the chance to define themselves while also challenging cognitive studies scholarship and its reification of the neurological passivity of autistics."
+)
+
+Source.create(
+    source_type: "Article",
+    title: "Autistic People Care Too Much, Research Says", 
+    genre: "Science", 
+    url: "https://neuroclastic.com/2020/11/07/autistic-people-care-too-much-research-says/",
+    img_url: "https://i2.wp.com/neuroclastic.com/wp-content/uploads/2020/11/BunnyImage_AutisticPeopleAreTooGenerous.jpg?w=1600&ssl=1", 
+    tag_ids: %w[4 12 13],
+    creator_ids: %w[4],
+    description: "A research article concluded that autistic people cared too much about others, citing inflexibility to be an issue by following moral code even when individual gains are high. In my personal opinion as an autistic person, I would argue that the non-autistic participants did not weight the negative consequences of their actions enough, and simply chose individual benefit over other people."
 )
 
 
-# Book.create(
-#     title: "Spectrum Women", 
-#     author:"Barb Cook & Dr. Michelle Garnett", 
-#     genre: "Autobiographical", 
-#     img_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F71jcxn78s%2BL.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FSpectrum-Women-Walking-Beat-Autism%2Fdp%2F1785924346&tbnid=8ArqDipia5la_M&vet=12ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ..i&docid=dCC0cMZmxrnBjM&w=848&h=1250&q=spectrum%20women&ved=2ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ", 
-#     tag_ids: %w[2 6 9],
-#     creator_ids: %w[1 2]
-# )
 
-# Article.create(
-#     title: "The Expectancies and Motivations for Heavy Episodic Drinking of Alcohol in Autistic Adults",
-#     author: ,
-#     url: ,
-#     excerpt: ,
-#     tag_ids: 
-# )
+
 
