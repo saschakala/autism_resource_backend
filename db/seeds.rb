@@ -32,6 +32,10 @@ Tag.create(tag_name: "created_by_autistic")
 
 Tag.create(tag_name: "article")
 
+Tag.create(tag_name: "academic")
+
+Tag.create(tag_name: "book")
+
 # 1
 Creator.create(
     first_name:"Barb",
@@ -69,13 +73,22 @@ Creator.create(
     bio: "Ira Kraemer is an autistic disability advocate. They serve on multiple disability committees and speak on hyperacusis and auditory sensitivity. Ira is a campaigner for accessibility, disability rights, and acceptance of autistic people in this world."
 )
 
+#5
+Creator.create(
+    first_name:"Melanie",
+    last_name:"Yergeau",
+    autistic: true,
+    url: "https://autisticscienceperson.com/",
+    bio: "Melanie Yergeau is an associate professor of Digital Studies and English and associate director of the Digital Studies Institute at the University of Michigan. They are an autistic academic, and their scholarly interests include writing studies, digital studies, queer rhetorics, disability studies, and theories of mind."
+)
+
 Source.create(
     source_type: "Book",
     title: "Spectrum Women", 
     genre: "Autobiographical", 
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
     img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534033798l/38884913._SX318_.jpg", 
-    tag_ids: %w[2 6 9],
+    tag_ids: %w[2 6 9 15],
     creator_ids: %w[1 2],
     description: "Barb Cook and 14 other autistic women describe life from a female autistic perspective, and present empowering, helpful and supportive insights from their personal experience for fellow autistic women. Michelle Garnett's comments validate and expand the experiences described from a clinician's perspective, and provide extensive recommendations."
 )
@@ -86,9 +99,20 @@ Source.create(
     genre: "Science", 
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
     img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1585179141l/52559342.jpg", 
-    tag_ids: %w[4 8 12],
-    creator_ids: %w[3],
+    tag_ids: %w[4 8 12 15],
+    creator_ids: %w[4],
     description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
+)
+
+Source.create(
+    source_type: "Book",
+    title: "Authoring Autism: On Rhetoric and Neurological Queerness", 
+    genre: "Academia", 
+    url: "https://www.dukeupress.edu/authoring-autism",
+    img_url: "https://www.dukeupress.edu/Assets/Books/978-0-8223-7020-8_pr.jpg", 
+    tag_ids: %w[3 4 12 14 15],
+    creator_ids: %w[5],
+    description: "In Authoring Autism Melanie Yergeau defines neurodivergence as an identity—neuroqueerness—rather than an impairment. Using a queer theory framework, Yergeau notes the stereotypes that deny autistic people their humanity and the chance to define themselves while also challenging cognitive studies scholarship and its reification of the neurological passivity of autistics."
 )
 
 Source.create(
