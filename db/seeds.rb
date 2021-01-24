@@ -30,6 +30,8 @@ Tag.create(tag_name: "not_explicitly_autistic")
 
 Tag.create(tag_name: "created_by_autistic")
 
+Tag.create(tag_name: "article")
+
 # 1
 Creator.create(
     first_name:"Barb",
@@ -55,6 +57,14 @@ Creator.create(
     url: "https://www.camillapang.com/"
 )
 
+#4
+Creator.create(
+    first_name:"Ira",
+    last_name:"Kraemer",
+    autistic: true,
+    url: "https://autisticscienceperson.com/"
+)
+
 Source.create(
     source_type: "Book",
     title: "Spectrum Women", 
@@ -77,21 +87,18 @@ Source.create(
     description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
 )
 
+Source.create(
+    source_type: "Article",
+    title: "Autistic People Care Too Much, Research Says", 
+    genre: "Science", 
+    url: "https://neuroclastic.com/2020/11/07/autistic-people-care-too-much-research-says/",
+    img_url: "https://i2.wp.com/neuroclastic.com/wp-content/uploads/2020/11/BunnyImage_AutisticPeopleAreTooGenerous.jpg?w=1600&ssl=1", 
+    tag_ids: %w[4 12 13],
+    creator_ids: %w[4],
+    description: "A research article concluded that autistic people cared too much about others, citing inflexibility to be an issue by following moral code even when individual gains are high. In my personal opinion as an autistic person, I would argue that the non-autistic participants did not weight the negative consequences of their actions enough, and simply chose individual benefit over other people."
+)
 
-# Book.create(
-#     title: "Spectrum Women", 
-#     author:"Barb Cook & Dr. Michelle Garnett", 
-#     genre: "Autobiographical", 
-#     img_url: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F71jcxn78s%2BL.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.com%2FSpectrum-Women-Walking-Beat-Autism%2Fdp%2F1785924346&tbnid=8ArqDipia5la_M&vet=12ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ..i&docid=dCC0cMZmxrnBjM&w=848&h=1250&q=spectrum%20women&ved=2ahUKEwj-2dXzwp7uAhXLeDABHcDhCVUQMygAegUIARCiAQ", 
-#     tag_ids: %w[2 6 9],
-#     creator_ids: %w[1 2]
-# )
 
-# Article.create(
-#     title: "The Expectancies and Motivations for Heavy Episodic Drinking of Alcohol in Autistic Adults",
-#     author: ,
-#     url: ,
-#     excerpt: ,
-#     tag_ids: 
-# )
+
+
 
