@@ -6,7 +6,7 @@ class Api::V1::SourcesController < ApplicationController
     end
 
     def show
-        books = Source.all.select {|source| source.source_type == "Book"} #move this to a method in model
+        books = Source.books
         if params[:id] == "books"
             render json: SourceSerializer.new(books)
         end
