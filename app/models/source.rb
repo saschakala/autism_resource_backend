@@ -9,5 +9,9 @@ class Source < ApplicationRecord
         self.all.select { |source| source.source_type == "Book"}
     end
 
+    def self.articles
+        self.all.select { |source| source.source_type == "Article"}
+    end
+
 
 end
