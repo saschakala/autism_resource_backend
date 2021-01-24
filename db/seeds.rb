@@ -37,7 +37,8 @@ Creator.create(
     first_name:"Barb",
     last_name:"Cook",
     autistic: true,
-    url: "https://barbcook.com.au/"
+    url: "https://barbcook.com.au/",
+    bio: "Barb Cook - Editor in Chief Formally identified on the autism spectrum along with ADHD and phonological dyslexia in 2009 at the age of 40, Barb is founder and editor in chief of Spectrum Women Magazine and editor and co-author of Spectrum Women: Walking to the Beat of Autism."
 )
 # 2
 Creator.create(
@@ -45,7 +46,8 @@ Creator.create(
     last_name:"Garnett",
     autistic: false,
     title: "Dr.",
-    url: "https://mindsandhearts.net/dr-michelle-garnett/"
+    url: "https://mindsandhearts.net/dr-michelle-garnett/",
+    bio: "Dr Michelle Garnett PhD is a clinical psychologist and founder of Minds & Hearts, a clinic specialising in Autism Spectrum Disorders (ASD) in Brisbane, Australia."
 )
 
 # 3
@@ -54,7 +56,8 @@ Creator.create(
     last_name:"Pang",
     autistic: true,
     title: "PhD",
-    url: "https://www.camillapang.com/"
+    url: "https://www.camillapang.com/",
+    bio: "Camilla Sih Mai Pang is a British computational biologist, writer and autism advocate. In 2020 she was awarded the Royal Society Prizes for Science Books for her memoir Explaining Humans: What Science Can Teach Us about Life, Love and Relationships."
 )
 
 #4
@@ -62,7 +65,8 @@ Creator.create(
     first_name:"Ira",
     last_name:"Kraemer",
     autistic: true,
-    url: "https://autisticscienceperson.com/"
+    url: "https://autisticscienceperson.com/",
+    bio: "Ira Kraemer is an autistic disability advocate. They serve on multiple disability committees and speak on hyperacusis and auditory sensitivity. Ira is a campaigner for accessibility, disability rights, and acceptance of autistic people in this world."
 )
 
 Source.create(
