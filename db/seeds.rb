@@ -113,8 +113,8 @@ Source.create(
     source_type: "Book",
     title: "Authoring Autism: On Rhetoric and Neurological Queerness", 
     genre: "Academia", 
-    url: "https://www.dukeupress.edu/authoring-autism",
-    img_url: "https://www.dukeupress.edu/Assets/Books/978-0-8223-7020-8_pr.jpg", 
+    url: "https://www.goodreads.com/en/book/show/33673918-authoring-autism",
+    img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1510777050l/33673918._SY475_.jpg", 
     tag_ids: %w[3 4 12 14 15],
     creator_ids: %w[5],
     description: "In Authoring Autism Melanie Yergeau defines neurodivergence as an identity—neuroqueerness—rather than an impairment. Using a queer theory framework, Yergeau notes the stereotypes that deny autistic people their humanity and the chance to define themselves while also challenging cognitive studies scholarship and its reification of the neurological passivity of autistics."
