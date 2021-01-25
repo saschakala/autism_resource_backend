@@ -22,13 +22,13 @@ Tag.create(tag_name: "poetry")
 
 Tag.create(tag_name: "novel")
 
-Tag.create(tag_name: "short_story")
+Tag.create(tag_name: "short story")
 
 Tag.create(tag_name: "essay")
 
-Tag.create(tag_name: "not_explicitly_autistic")
+Tag.create(tag_name: "not explicitly autistic")
 
-Tag.create(tag_name: "created_by_autistic")
+Tag.create(tag_name: "by autist creator")
 
 Tag.create(tag_name: "article")
 
@@ -131,6 +131,11 @@ Source.create(
     description: "A research article concluded that autistic people cared too much about others, citing inflexibility to be an issue by following moral code even when individual gains are high. In my personal opinion as an autistic person, I would argue that the non-autistic participants did not weight the negative consequences of their actions enough, and simply chose individual benefit over other people."
 )
 
+Feedback.create(
+    title: "Example feedback response",
+    feedback: "I want to see more movies on here", 
+    name: "Billius"
+)
 
 
 
