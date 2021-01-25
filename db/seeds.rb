@@ -28,7 +28,7 @@ Tag.create(tag_name: "essay")
 
 Tag.create(tag_name: "not explicitly autistic")
 
-Tag.create(tag_name: "by autist creator")
+Tag.create(tag_name: "by autistic creator")
 
 Tag.create(tag_name: "article")
 
