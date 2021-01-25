@@ -13,5 +13,10 @@ class Source < ApplicationRecord
         self.all.select { |source| source.source_type == "Article"}
     end
 
+    def self.book_tags
+        tags = self.books.map {|source| source.tags}
+        tags.map.with_index {|tag, i| tag[i]}
+    end
+
 
 end

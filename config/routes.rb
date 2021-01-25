@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :sources do
-        get '/books/', to: 'sources#show'
+        get '/books', to: 'sources#show'
         get '/articles', to: 'sources#show'
       end
       resources :creators
-      resources :tags
+      resources :tags do
+        get '/books/', to: 'tags#show'
+      end
+
     end
   end
 
