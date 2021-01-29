@@ -105,7 +105,7 @@ Source.create(
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
     img_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1585179141l/52559342.jpg", 
     tag_ids: %w[4 8 12 15],
-    creator_ids: %w[4],
+    creator_ids: %w[3],
     description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
 )
 
