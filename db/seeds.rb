@@ -89,8 +89,7 @@ Creator.create(
     pronouns: "they/them/theirs"
 )
 
-Source.create(
-    source_type: "book",
+Book.create(
     title: "Spectrum Women", 
     genre: "Autobiographical", 
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
@@ -100,8 +99,7 @@ Source.create(
     description: "Barb Cook and 14 other autistic women describe life from a female autistic perspective, and present empowering, helpful and supportive insights from their personal experience for fellow autistic women. Michelle Garnett's comments validate and expand the experiences described from a clinician's perspective, and provide extensive recommendations."
 )
 
-Source.create(
-    source_type: "book",
+Book.create(
     title: "An Outsider's Guide to Humans", 
     genre: "Science", 
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
@@ -111,8 +109,7 @@ Source.create(
     description: "Diagnosed with Autism Spectrum Disorder at the age of eight, Camilla Pang struggled to understand the world around her. Desperate for a solution, she asked her mother if there was an instruction manual for humans that she could consult. With no blueprint to life, Pang began to create her own, using the language she understands best: science."
 )
 
-Source.create(
-    source_type: "book",
+Book.create(
     title: "Authoring Autism: On Rhetoric and Neurological Queerness", 
     genre: "Academia", 
     url: "https://www.goodreads.com/en/book/show/33673918-authoring-autism",

@@ -8,14 +8,6 @@ class Api::V1::SourcesController < ApplicationController
     def show
         sources = Source.type(params[:id])
         render json: SourceSerializer.new(sources)
-        # books = Source.books
-        # articles = Source.articles
-        # case 
-        # when params[:id] == "books"
-        #     render json: SourceSerializer.new(books)
-        # when params[:id] == "articles"
-        #     render json: SourceSerializer.new(articles)
-        # end
     end
 
     private
