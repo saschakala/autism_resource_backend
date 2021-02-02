@@ -1,3 +1,5 @@
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -88,7 +90,7 @@ Creator.create(
 )
 
 Source.create(
-    source_type: "Book",
+    source_type: "book",
     title: "Spectrum Women", 
     genre: "Autobiographical", 
     url: "https://www.goodreads.com/book/show/38884913-spectrum-women",
@@ -99,7 +101,7 @@ Source.create(
 )
 
 Source.create(
-    source_type: "Book",
+    source_type: "book",
     title: "An Outsider's Guide to Humans", 
     genre: "Science", 
     url: "https://www.goodreads.com/book/show/52559342-an-outsider-s-guide-to-humans",
@@ -110,7 +112,7 @@ Source.create(
 )
 
 Source.create(
-    source_type: "Book",
+    source_type: "book",
     title: "Authoring Autism: On Rhetoric and Neurological Queerness", 
     genre: "Academia", 
     url: "https://www.goodreads.com/en/book/show/33673918-authoring-autism",
@@ -121,7 +123,7 @@ Source.create(
 )
 
 Source.create(
-    source_type: "Article",
+    source_type: "article",
     title: "Autistic People Care Too Much, Research Says", 
     genre: "Science", 
     url: "https://neuroclastic.com/2020/11/07/autistic-people-care-too-much-research-says/",
@@ -136,6 +138,7 @@ Feedback.create(
     feedback: "I want to see more movies on here", 
     name: "Billius"
 )
+
 
 
 

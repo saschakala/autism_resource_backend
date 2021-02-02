@@ -4,10 +4,14 @@ class Source < ApplicationRecord
     has_many :source_creators
     has_many :creators, through: :source_creators
 
+    scope :type, -> (type) {where(source_type: type)}
+    # scope :type, -> (type) {joins(:tags).where('tags.tag_name = type')}
+    
 
-    def self.books
-        self.all.select { |source| source.source_type == "Book"}
-    end
+
+    # def self.books
+    #     self.all.select { |source| source.source_type == "Book"}
+    # end
 
     def self.articles
         self.all.select { |source| source.source_type == "Article"}
