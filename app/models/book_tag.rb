@@ -1,4 +1,4 @@
 class BookTag < ApplicationRecord
-  belongs_to :Book
-  belongs_to :Tag
+  belongs_to :book
+  belongs_to :tag
 end
