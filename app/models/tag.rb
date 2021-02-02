@@ -7,7 +7,8 @@ class Tag < ApplicationRecord
 
     def self.books
         book_tag = Tag.find_by(tag_name: 'book')
-        book_tag.sources.map {|source| source.tags}.flatten.uniq
+        all_tags = book_tag.books.map {|book| book.tags}.flatten.uniq
+        all_tags.keep_if { |tag| tag.tag_name != "book" }
     end
 
 

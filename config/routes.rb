@@ -9,7 +9,9 @@ Rails.application.routes.draw do
         get '/book/', to: 'sources#show'
         get '/article', to: 'sources#show'
       end
-      resources :books
+      resources :books do
+        get '/tags', to: 'books#show'
+      end
       resources :creators
       resources :tags do
         get '/books/', to: 'tags#show'

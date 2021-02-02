@@ -1,4 +1,4 @@
 class TagSerializer
   include JSONAPI::Serializer
-  attributes :tag_name, :sources
+  attributes :tag_name, :books
 end
