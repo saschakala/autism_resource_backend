@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
   
   
+  resources :books
   namespace :api do
     namespace :v1 do
       resources :sources do
-        get '/books', to: 'sources#show'
-        get '/articles', to: 'sources#show'
+        get '/book/', to: 'sources#show'
+        get '/article', to: 'sources#show'
       end
       resources :creators
       resources :tags do
