@@ -6,7 +6,7 @@ class Api::V1::BooksController < ApplicationController
     end
 
     def show
-        books_by_tag = Book.type(params[:id])
+        books_by_tag = Book.by_tag(params[:id])
         render json: BookSerializer.new(books_by_tag)
     end
 

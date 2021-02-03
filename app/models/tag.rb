@@ -13,10 +13,10 @@ class Tag < ApplicationRecord
         all_tags.keep_if { |tag| tag.tag_name != "book" }
     end
 
-    def self.book_filter(name)
-        tag = self.all.find_by(tag_name: name)
-        tag.books
-    end
+    # def self.book_filter(name)
+    #     tag = self.all.find_by(tag_name: name)
+    #     tag.books
+    # end
 
 
 
