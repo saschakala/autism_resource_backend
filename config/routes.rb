@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       end
       resources :books do
         get '/tags', to: 'books#show'
+        get '/all', to: 'books#show'
       end
       resources :creators
       resources :tags do
