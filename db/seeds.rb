@@ -24,13 +24,13 @@ Tag.create(tag_name: "poetry")
 
 Tag.create(tag_name: "novel")
 
-Tag.create(tag_name: "short story")
+Tag.create(tag_name: "short_story")
 
 Tag.create(tag_name: "essay")
 
-Tag.create(tag_name: "not explicitly autistic")
+Tag.create(tag_name: "not_explicitly_autistic")
 
-Tag.create(tag_name: "by autistic creator")
+Tag.create(tag_name: "by_autistic_creator")
 
 Tag.create(tag_name: "article")
 
