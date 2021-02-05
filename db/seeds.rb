@@ -119,8 +119,7 @@ Book.create(
     description: "In Authoring Autism Melanie Yergeau defines neurodivergence as an identity—neuroqueerness—rather than an impairment. Using a queer theory framework, Yergeau notes the stereotypes that deny autistic people their humanity and the chance to define themselves while also challenging cognitive studies scholarship and its reification of the neurological passivity of autistics."
 )
 
-Source.create(
-    source_type: "article",
+Article.create(
     title: "Autistic People Care Too Much, Research Says", 
     genre: "Science", 
     url: "https://neuroclastic.com/2020/11/07/autistic-people-care-too-much-research-says/",
