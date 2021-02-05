@@ -16,6 +16,13 @@ class Tag < ApplicationRecord
         all_tags.keep_if { |tag| tag.tag_name != "book" }
     end
 
+
+    def self.articles
+        article_tag = Tag.find_by(tag_name: 'article')
+        all_tags = article_tag.articles.map {|article| article.tags}.flatten.uniq
+        all_tags.keep_if { |tag| tag.tag_name != "article" }
+    end
+
     # def self.book_filter(name)
     #     tag = self.all.find_by(tag_name: name)
     #     tag.books

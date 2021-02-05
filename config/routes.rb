@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       end
       resources :tags do
         get '/books/', to: 'tags#show'
+        get '/articles/', to: 'tags#show'
       end
       resources :articles do
         get '/all', to: 'articles#show'
