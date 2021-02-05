@@ -7,10 +7,11 @@ class Api::V1::TagsController < ApplicationController
     end
 
     def show
-        books = Tag.books
         case 
         when params[:id] == "books"
-            render json: TagSerializer.new(books)
+            render json: TagSerializer.new(Tag.books)
+        when params[:id] == "articles"
+            render json: TagSerializer.new(Tag.articles)
         end
     end
 
