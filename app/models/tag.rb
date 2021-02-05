@@ -5,6 +5,9 @@ class Tag < ApplicationRecord
     has_many :book_tags
     has_many :books, through: :book_tags
 
+    has_many :article_tags
+    has_many :articles, through: :article_tags
+
     # scope :type, -> (tag) {where(tag_name: tag)}
 
     def self.books
