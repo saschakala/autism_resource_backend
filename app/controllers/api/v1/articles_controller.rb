@@ -9,7 +9,7 @@ class Api::V1::ArticlesController < ApplicationController
             render json: ArticleSerializer.new(Article.all)
         else
             articles_by_tag = Article.by_tag(params[:id])
-            render json: ArticleSerializer.new(books_by_tag)
+            render json: ArticleSerializer.new(articles_by_tag)
         end
     end
 
