@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_031337) do
+ActiveRecord::Schema.define(version: 2021_02_06_032441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,15 +100,6 @@ ActiveRecord::Schema.define(version: 2021_02_05_031337) do
     t.index ["source_id"], name: "index_source_creators_on_source_id"
   end
 
-  create_table "source_tags", force: :cascade do |t|
-    t.bigint "source_id"
-    t.bigint "tag_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["source_id"], name: "index_source_tags_on_source_id"
-    t.index ["tag_id"], name: "index_source_tags_on_tag_id"
-  end
-
   create_table "sources", force: :cascade do |t|
     t.string "source_type"
     t.string "title"
@@ -138,6 +129,4 @@ ActiveRecord::Schema.define(version: 2021_02_05_031337) do
   add_foreign_key "book_tags", "tags"
   add_foreign_key "source_creators", "creators"
   add_foreign_key "source_creators", "sources"
-  add_foreign_key "source_tags", "sources"
-  add_foreign_key "source_tags", "tags"
 end
