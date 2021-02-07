@@ -38,6 +38,15 @@ Tag.create(tag_name: "academic")
 
 Tag.create(tag_name: "book")
 
+Tag.create(tag_name: "twitter")
+
+Tag.create(tag_name: "tiktok")
+
+Tag.create(tag_name: "instagram")
+
+Tag.create(tag_name: "youtube")
+
+
 # 1
 Creator.create(
     first_name:"Barb",
@@ -89,6 +98,15 @@ Creator.create(
     pronouns: "they/them/theirs"
 )
 
+#6
+Creator.create(
+    first_name:"Ann",
+    last_name:"Memmott",
+    autistic: true,
+    url: "https://twitter.com/AnnMemmott",
+    pronouns: "she/they"
+)
+
 Book.create(
     title: "Spectrum Women", 
     genre: "Autobiographical", 
@@ -127,6 +145,21 @@ Article.create(
     tag_ids: %w[4 12 13],
     creator_ids: %w[4],
     description: "A research article concluded that autistic people cared too much about others, citing inflexibility to be an issue by following moral code even when individual gains are high. In my personal opinion as an autistic person, I would argue that the non-autistic participants did not weight the negative consequences of their actions enough, and simply chose individual benefit over other people."
+)
+
+SocialMediaAccount.create(
+    platform: "Twitter",
+    handle: "@AnnMemmott", 
+    url: "https://twitter.com/AnnMemmott",
+    img_url: "https://pbs.twimg.com/profile_images/1231855713955262466/HN5QgOy3_400x400.jpg", 
+    genre: "Research critique",
+    tag_ids: %w[3 4 12 16],
+    creator_ids: %w[6],
+    bio: "Drinker of tea.
+    Excellent at not climbing mountains.
+    Views my own. Tough subjects on this personal page.
+    Autistic Elder. Masters dissertation.
+    She/they."
 )
 
 Feedback.create(
