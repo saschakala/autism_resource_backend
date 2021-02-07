@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   
-  resources :social_media_accounts
+  
   namespace :api do
     namespace :v1 do
       resources :books do
@@ -14,6 +14,9 @@ Rails.application.routes.draw do
       end
       resources :articles do
         get '/all', to: 'articles#show'
+      end
+      resources :social_media_accounts do
+        get '/all', to: 'social_media_accounts#show'
       end
       resources :feedbacks
       resources :creators
