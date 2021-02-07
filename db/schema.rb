@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_07_042012) do
+ActiveRecord::Schema.define(version: 2021_02_07_042659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,15 @@ ActiveRecord::Schema.define(version: 2021_02_07_042012) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "sma_creators", force: :cascade do |t|
+    t.bigint "social_media_account_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_sma_creators_on_creator_id"
+    t.index ["social_media_account_id"], name: "index_sma_creators_on_social_media_account_id"
+  end
+
   create_table "sma_tags", force: :cascade do |t|
     t.bigint "social_media_account_id"
     t.bigint "tag_id"
@@ -126,6 +135,8 @@ ActiveRecord::Schema.define(version: 2021_02_07_042012) do
   add_foreign_key "book_creators", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
+  add_foreign_key "sma_creators", "creators"
+  add_foreign_key "sma_creators", "social_media_accounts"
   add_foreign_key "sma_tags", "social_media_accounts"
   add_foreign_key "sma_tags", "tags"
 end
