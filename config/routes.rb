@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :social_media_accounts
   namespace :api do
     namespace :v1 do
       resources :books do

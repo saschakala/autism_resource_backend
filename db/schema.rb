@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_06_032752) do
+ActiveRecord::Schema.define(version: 2021_02_07_032446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,18 @@ ActiveRecord::Schema.define(version: 2021_02_06_032752) do
     t.string "title"
     t.text "feedback"
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "social_media_accounts", force: :cascade do |t|
+    t.string "platform"
+    t.string "handle"
+    t.string "name"
+    t.string "url"
+    t.string "img_url"
+    t.text "description"
+    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
