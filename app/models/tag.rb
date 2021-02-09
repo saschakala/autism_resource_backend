@@ -11,6 +11,9 @@ class Tag < ApplicationRecord
     has_many :sma_tags
     has_many :social_media_accounts, through: :sma_tags
 
+    has_many :multimedia_tags
+    has_many :multimedia, through: :multimedia_tags
+
     # scope :type, -> (tag) {where(tag_name: tag)}
 
     def self.books

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_09_015242) do
+ActiveRecord::Schema.define(version: 2021_02_09_015507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,15 @@ ActiveRecord::Schema.define(version: 2021_02_09_015242) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "multimedia_creators", force: :cascade do |t|
+    t.bigint "multimedium_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_multimedia_creators_on_creator_id"
+    t.index ["multimedium_id"], name: "index_multimedia_creators_on_multimedium_id"
+  end
+
   create_table "multimedia_tags", force: :cascade do |t|
     t.bigint "multimedium_id"
     t.bigint "tags_id"
@@ -153,6 +162,8 @@ ActiveRecord::Schema.define(version: 2021_02_09_015242) do
   add_foreign_key "book_creators", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
+  add_foreign_key "multimedia_creators", "creators"
+  add_foreign_key "multimedia_creators", "multimedia"
   add_foreign_key "multimedia_tags", "multimedia"
   add_foreign_key "multimedia_tags", "tags", column: "tags_id"
   add_foreign_key "sma_creators", "creators"

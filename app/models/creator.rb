@@ -10,5 +10,8 @@ class Creator < ApplicationRecord
 
     has_many :sma_creators
     has_many :social_media_accounts, through: :sma_creators
+
+    has_many :multimedia_creators
+    has_many :multimedia, through: :multimedia_creators
 end
 
