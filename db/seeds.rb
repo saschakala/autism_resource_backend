@@ -46,6 +46,10 @@ Tag.create(tag_name: "instagram")
 
 Tag.create(tag_name: "youtube")
 
+Tag.create(tag_name: "TV")
+
+Tag.create(tag_name: "movie")
+
 
 # 1
 Creator.create(
@@ -167,6 +171,7 @@ Feedback.create(
     feedback: "I want to see more movies on here", 
     name: "Billius"
 )
+
 
 
 

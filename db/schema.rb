@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 2021_02_11_012229) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "type"
+    t.string "media_type"
   end
 
   create_table "multimedia_creators", force: :cascade do |t|
