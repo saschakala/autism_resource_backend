@@ -172,6 +172,15 @@ Feedback.create(
     name: "Billius"
 )
 
+Film.create(
+    title: "Everything's Gonna Be Okay",
+    genre: "Comedy",
+    url: "https://www.rottentomatoes.com/tv/everythings_gonna_be_okay",
+    img_url: "https://resizing.flixster.com/31brQmXNCCMUooNrZxUgQtD1Cpw=/206x305/v1.dDs2NDk2Njg7ajsxODcxMDsxMjAwOzIwMzE7MzAwMA",
+    description: "Nicholas is a neurotic twenty-something visiting his dad and teenage half-sisters, one of whom is on the autism spectrum. When Nicholas' trip is extended due to his father's untimely death, the siblings are left to cope with not only a devastating loss, but also the realization that Nicholas is the one who will have to rise to the occasion and hold it all together. Navigating autism, budding sexuality, consent, parenthood, adolescence, family and grief, the heartfelt comedy follows this imperfect family as they discover the importance of finding happiness in the middle of really difficult moments, one awkward conversation at a time.",
+    film_type: "TV",
+    tag_ids: %w[5 20]
+)
 
 
 
