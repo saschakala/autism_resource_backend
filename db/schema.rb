@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_041936) do
+ActiveRecord::Schema.define(version: 2021_02_13_042937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,35 @@ ActiveRecord::Schema.define(version: 2021_02_13_041936) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "film_creators", force: :cascade do |t|
+    t.bigint "film_id"
+    t.bigint "creator_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_id"], name: "index_film_creators_on_creator_id"
+    t.index ["film_id"], name: "index_film_creators_on_film_id"
+  end
+
+  create_table "film_tags", force: :cascade do |t|
+    t.bigint "film_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["film_id"], name: "index_film_tags_on_film_id"
+    t.index ["tag_id"], name: "index_film_tags_on_tag_id"
+  end
+
+  create_table "films", force: :cascade do |t|
+    t.string "title"
+    t.string "genre"
+    t.string "url"
+    t.string "img_url"
+    t.text "description"
+    t.string "film_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "sma_creators", force: :cascade do |t|
     t.bigint "social_media_account_id"
     t.bigint "creator_id"
@@ -134,6 +163,10 @@ ActiveRecord::Schema.define(version: 2021_02_13_041936) do
   add_foreign_key "book_creators", "creators"
   add_foreign_key "book_tags", "books"
   add_foreign_key "book_tags", "tags"
+  add_foreign_key "film_creators", "creators"
+  add_foreign_key "film_creators", "films"
+  add_foreign_key "film_tags", "films"
+  add_foreign_key "film_tags", "tags"
   add_foreign_key "sma_creators", "creators"
   add_foreign_key "sma_creators", "social_media_accounts"
   add_foreign_key "sma_tags", "social_media_accounts"

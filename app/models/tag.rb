@@ -11,8 +11,8 @@ class Tag < ApplicationRecord
     has_many :sma_tags
     has_many :social_media_accounts, through: :sma_tags
 
-    has_many :multimedia_tags
-    has_many :multimedia, through: :multimedia_tags
+    has_many :film_tags
+    has_many :films, through: :film_tags
 
     # scope :type, -> (tag) {where(tag_name: tag)}
 
