@@ -19,8 +19,7 @@ Rails.application.routes.draw do
       resources :social_media_accounts do
         get '/all', to: 'social_media_accounts#show'
       end
-      resources :multimedia
-      resources :feedbacks
+          resources :feedbacks
       resources :creators
 
     end
